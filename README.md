@@ -1,16 +1,54 @@
-# expense_tracker
+# Expense Tracker
 
-A new Flutter project.
+## Overview
+The **Expense Tracker** is a Flutter-based mobile application designed to help users manage and track their expenses efficiently. It provides intuitive charts, categorized transactions, and a seamless user experience to keep finances under control.
 
-## Getting Started
+## Features
+- **Add Expenses**: Users can input expenses with details such as category, amount, and date.
+- **Expense Categories**: Organize expenses into categories like Food, Transportation, Shopping, etc.
+- **Charts & Analytics**: Visualize spending habits using **fl_chart**.
+- **State Management**: Uses **flutter_bloc** for efficient state handling.
+- **Custom Icons**: Integrated **font_awesome_flutter** for visually appealing UI.
+- **Material Design**: Ensures a smooth and responsive experience.
 
-This project is a starting point for a Flutter application.
+## Technologies Used
+- **Flutter** (Dart)
+- **flutter_bloc** (State Management)
+- **fl_chart** (Data Visualization)
+- **font_awesome_flutter** (Icons)
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/expense_tracker.git
+   cd expense_tracker
+   ```
+2. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+3. Run the app:
+   ```sh
+   flutter run
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Folder Structure
+```
+lib/
+│── main.dart  # Entry point
+│── blocs/     # Bloc files for state management
+│── models/    # Data models
+│── screens/   # UI screens
+│── widgets/   # Reusable widgets
+│── utils/     # Helper functions
+assets/
+│── fonts/     # Custom fonts
+│── icons/     # Custom icons
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contributing
+Contributions are welcome! Please fork the repo, make your changes, and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+
