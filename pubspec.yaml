@@ -1,0 +1,13 @@
+name: expense_tracker
+
+environment:
+  sdk: '^3.5.0'
+
+dependencies:
+  fl_chart: ^0.66.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
