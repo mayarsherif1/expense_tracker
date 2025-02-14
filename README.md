@@ -45,10 +45,3 @@ assets/
 │── fonts/     # Custom fonts
 │── icons/     # Custom icons
 ```
-
-## Contributing
-Contributions are welcome! Please fork the repo, make your changes, and submit a pull request.
-
-## License
-This project is licensed under the MIT License.
-
