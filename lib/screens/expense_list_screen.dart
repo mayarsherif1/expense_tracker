@@ -21,7 +21,9 @@ class ExpenseListScreen extends StatelessWidget {
                   trailing: IconButton(
                     icon: Icon(Icons.delete, color: Colors.red),
                     onPressed: () {
-                      context.read<ExpenseCubit>().deleteExpense(expense.id);
+                      _showDeleteConfirmationDialog(context, () {
+                        context.read<ExpenseCubit>().deleteExpense(expense.id);
+                      });
                     },
                   ),
                 );
@@ -31,6 +33,31 @@ class ExpenseListScreen extends StatelessWidget {
           return Center(child: Text("No expenses yet"));
         },
       ),
+    );
+  }
+
+  void _showDeleteConfirmationDialog(BuildContext context, VoidCallback onConfirm) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Confirm Deletion"),
+          content: const Text("Are you sure you want to delete this expense?"),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text("Cancel"),
+            ),
+            TextButton(
+              onPressed: () {
+                onConfirm();
+                Navigator.of(context).pop();
+              },
+              child: const Text("Yes", style: TextStyle(color: Colors.red)),
+            ),
+          ],
+        );
+      },
     );
   }
 }
